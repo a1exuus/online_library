@@ -4,6 +4,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from json import loads
 
+from livereload import Server
+
 with open('meta_data.json', 'r', encoding='utf-8') as file:
     books_json = file.read()
 
@@ -16,12 +18,14 @@ env = Environment(
 
 template = env.get_template('template.html')
 
-rendered_page = template.render(
-    cards=books
-)
 
-with open('index.html', 'w', encoding="utf8") as file:
-    file.write(rendered_page)
+def on_reload():
+    rendered_page = template.render(cards=books)
+    with open('index.html', 'w', encoding="utf-8") as file:
+        file.write(rendered_page)
+    print('Страница обновлена!')
 
-server = HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler)
-server.serve_forever()
+
+server = Server()
+server.watch('template.html', on_reload)
+server.serve(root='.', port=8000)
