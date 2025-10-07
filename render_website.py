@@ -24,14 +24,23 @@ template = env.get_template('template.html')
 
 pages = list(chunked(books, 10))
 
+pages_count = len(pages)
+
 for i, page_books in enumerate(pages, start=1):
-    rendered_page = template.render(cards=page_books, page_number=i)
+    rendered_page = template.render(
+        cards=page_books,
+        page_number=i,
+        pages_count=pages_count)
     with open(f"pages/index{i}.html", "w", encoding="utf-8") as f:
         f.write(rendered_page)
 
 
 def on_reload():
-    rendered_page = template.render(cards=books)
+    rendered_page = template.render(
+        cards=pages[0],
+        page_number=1,
+        pages_count=pages_count
+    )
     with open('index.html', 'w', encoding="utf-8") as file:
         file.write(rendered_page)
     print('Страница обновлена!')
