@@ -1,4 +1,4 @@
-![Картинка](https://mgksk.by/images/06-06-2023-1.jpg)
+![Картинка](https://imgur.com/a/Sgf3NpR)
 
 # Сайт онлайн библиотеки
 
