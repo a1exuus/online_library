@@ -41,7 +41,7 @@
             <div class="card h-100">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="./{{ card.img_src }}" class="card-img" alt="{{ card.title }}">
+                  <img src="./media/{{ card.img_src }}" class="card-img" alt="{{ card.title }}">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -50,7 +50,7 @@
                     {% for genre in card.genres.split(', ') %}
                       <span class="badge badge-light">{{ genre }}</span>
                     {% endfor %}
-                    <p class="card-text"><small class="text-muted"><a href="/{{ card.book_path|urlencode }}">Читать</a></small></p>
+                    <p class="card-text"><small class="text-muted"><a href="/media/{{ card.book_path|urlencode }}">Читать</a></small></p>
                   </div>
                 </div>
               </div>
