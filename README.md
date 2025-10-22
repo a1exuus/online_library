@@ -1,4 +1,4 @@
-![Картинка](https://imgur.com/a/Sgf3NpR)
+![Картинка](https://i.imgur.com/ZQ3tOjb.jpeg)
 
 # Сайт онлайн библиотеки
 
