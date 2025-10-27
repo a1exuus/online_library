@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <link rel="icon" type="image/png" href="./media/img/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="./media/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../media/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../media/img/favicon-32x32.png" sizes="32x32">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
 
     <title>Онлайн Библиотека</title>
   </head>
@@ -41,7 +41,7 @@
             <div class="card h-100">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="./media/{{ card.img_src }}" class="card-img" alt="{{ card.title }}">
+                  <img src="../media/{{ card.img_src }}" class="card-img" alt="{{ card.title }}">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -50,7 +50,7 @@
                     {% for genre in card.genres.split(', ') %}
                       <span class="badge badge-light">{{ genre }}</span>
                     {% endfor %}
-                    <p class="card-text"><small class="text-muted"><a href="/media/{{ card.book_path|urlencode }}">Читать</a></small></p>
+                    <p class="card-text"><small class="text-muted"><a href="../media/{{ card.book_path|urlencode }}">Читать</a></small></p>
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@
     </div>    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./static/slim.min.js"></script>
-    <script src="./static/popper.min.js"></script>
-    <script src="./static/bootstrap.min.js"></script>"
+    <script src="../static/slim.min.js"></script>
+    <script src="../static/popper.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>"
 </html>
