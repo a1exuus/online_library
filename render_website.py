@@ -3,12 +3,29 @@ from json import loads
 from livereload import Server
 from os import makedirs
 from more_itertools import chunked
+from argparse import ArgumentParser
+
+
+def get_input_data():
+    parser = ArgumentParser(
+        description='Запуск сайта'
+    )
+    parser.add_argument(
+        '--path',
+        help='Путь до .json файла с вашими данными',
+        type=str,
+        required=True,
+        default='meta_data.json'
+        )
+
+    args = parser.parse_args()
+    return args
 
 
 def on_reload():
     makedirs("pages", exist_ok=True)
 
-    with open('meta_data.json', 'r', encoding='utf-8') as file:
+    with open(get_input_data().path, 'r', encoding='utf-8') as file:
         books_json = file.read()
 
     books = loads(books_json)
