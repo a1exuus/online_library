@@ -42,12 +42,12 @@ def on_reload():
 
     pages_count = len(pages)
 
-    for i, page_books in enumerate(pages, start=1):
+    for index, page_books in enumerate(pages, start=1):
         rendered_page = template.render(
             cards=page_books,
-            page_number=i,
+            page_number=index,
             pages_count=pages_count)
-        with open(f"pages/index{i}.html", "w", encoding="utf-8") as f:
+        with open(f"pages/index{index}.html", "w", encoding="utf-8") as f:
             f.write(rendered_page)
         rendered_page = template.render(
             cards=pages[0],
