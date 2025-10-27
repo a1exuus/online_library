@@ -14,7 +14,6 @@ def get_input_data():
         '--path',
         help='Путь до .json файла с вашими данными',
         type=str,
-        required=True,
         default='meta_data.json'
         )
 
