@@ -25,7 +25,7 @@
             {% if number == page_number %}
               <li class="page-item active"><a class="page-link" href="/pages/index{{ number }}.html">{{ number }}</a></li>
             {% else %}
-              <li class="page-item"><a class="page-link" target="_blank" href="/pages/index{{ number }}.html">{{ number }}</a></li>
+              <li class="page-item"><a class="page-link" href="/pages/index{{ number }}.html">{{ number }}</a></li>
             {% endif %}
           {% endfor %}
           {% if page_number == pages_count %}
