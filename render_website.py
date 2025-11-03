@@ -48,13 +48,6 @@ def on_reload():
             pages_count=pages_count)
         with open(f'pages/index{index}.html', 'w', encoding='utf-8') as f:
             f.write(rendered_page)
-        rendered_page = template.render(
-            cards=pages[0],
-            page_number=1,
-            pages_count=pages_count
-        )
-    with open('index.html', 'w', encoding='utf-8') as file:
-        file.write(rendered_page)
 
 
 def main():
