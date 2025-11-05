@@ -4,7 +4,7 @@
 
 ## Запуск
 
-Сайт находится на GitHub Pages, по [*ссылке*](https://a1exuus.github.io/online_library/).
+Сайт находится на GitHub Pages, по [*ссылке*](https://a1exuus.github.io/online_library/pages/index1.html).
 
 ***Но***, если вы хотите запустить сайт локально, то:
 
