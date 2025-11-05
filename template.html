@@ -50,7 +50,7 @@
                     {% for genre in card.genres.split(', ') %}
                       <span class="badge badge-light">{{ genre }}</span>
                     {% endfor %}
-                    <h5><p class="card-text"><a href="../media/{{ card.book_path|urlencode }}">Читать</a></p></h5>
+                    <h5><p class="card-text"><a href="../media/{{ card.book_path|urlencode }}" target="_blank">Читать</a></p></h5>
                   </div>
                 </div>
               </div>
